@@ -11,12 +11,10 @@ public class App {
 
 	final static Logger logger = Logger.getLogger(App.class);
 	public static void main(String[] args) {
-		/*ClassLoader loader = Thread.currentThread().getContextClassLoader();
-		URL url = loader.getResource("./conf/log4j.properties"); */
+		
 		PropertyConfigurator.configure("./conf/log4j.properties");
 		
-		logger.info("Starting application ...");
-		
+		logger.info("Starting application ...");		
 		Properties prop = LoadProperties.getProperties();
 		String appName = prop.getProperty("app.Name");
 		logger.info("Application Name = " + appName);
