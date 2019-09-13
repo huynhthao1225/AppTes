@@ -16,7 +16,7 @@ public final class LoadProperties {
 
 		try {
 
-			input = new FileInputStream("./conf/config.properties");
+			input = new FileInputStream("E:\\javaworkspace\\AppTes\\src\\config\\config.properties");
 
 			// load a properties file
 			prop.load(input);
