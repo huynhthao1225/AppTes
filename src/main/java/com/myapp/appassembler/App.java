@@ -1,32 +1,19 @@
 package com.myapp.appassembler;
 
 import java.util.LinkedHashMap;
-import java.util.Properties;
 
 import com.myapp.appassembler.challenge.FindTwoNumbersSumOfTarget;
-import com.myapp.appassembler.challenge.SortStringToken;
+import com.myapp.appassembler.challenge.CountWordsInString;
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
-
-import com.myapp.appassembler.utils.LoadProperties;
 
 public class App {
 
 	final static Logger logger = Logger.getLogger(App.class);
 	public static void main(String[] args) {
 		
-		PropertyConfigurator.configure("E:\\javaworkspace\\AppTes\\src\\config\\log4j.properties");
-		
-		logger.info("Starting application ...");		
-		Properties prop = LoadProperties.getProperties();
-		String appName = prop.getProperty("app.Name");
-		logger.info("Application Name = " + appName);
-		int ranValue = (int)(Math.random()*100);
-		
-		logger.info("use unix command \"echo $?\" to retrieve exit code");
-		logger.info("End application with exit code = " + ranValue);
 
-		SortStringToken sortStringToken = new SortStringToken();
+
+		CountWordsInString sortStringToken = new CountWordsInString();
 		LinkedHashMap<String, Integer> linkedHashMap = sortStringToken.sort("This is Thao and This is Thy");
 
 		// challenge 1
@@ -39,8 +26,9 @@ public class App {
 		FindTwoNumbersSumOfTarget findTwoNumbersSumOfTarget = new FindTwoNumbersSumOfTarget();
 		int[] numbers = {3, 5, 4, 7};
 		int[] foundThem = findTwoNumbersSumOfTarget.findThem(numbers, 7);
+		System.out.println(foundThem[0] + " and " + foundThem[1]);
 
-		System.exit(ranValue);
+
 
 	}
 
