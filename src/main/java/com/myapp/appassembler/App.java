@@ -3,7 +3,8 @@ package com.myapp.appassembler;
 import java.util.LinkedHashMap;
 import java.util.Properties;
 
-import com.myapp.appassembler.tool.SortStringToken;
+import com.myapp.appassembler.challenge.FindTwoNumbersSumOfTarget;
+import com.myapp.appassembler.challenge.SortStringToken;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
@@ -28,9 +29,17 @@ public class App {
 		SortStringToken sortStringToken = new SortStringToken();
 		LinkedHashMap<String, Integer> linkedHashMap = sortStringToken.sort("This is Thao and This is Thy");
 
+		// challenge 1
 		for (String key : linkedHashMap.keySet()) {
 			System.out.println(key + "\t" + linkedHashMap.get(key));
 		}
+
+		// challenge 2
+
+		FindTwoNumbersSumOfTarget findTwoNumbersSumOfTarget = new FindTwoNumbersSumOfTarget();
+		int[] numbers = {3, 5, 4, 7};
+		int[] foundThem = findTwoNumbersSumOfTarget.findThem(numbers, 7);
+
 		System.exit(ranValue);
 
 	}

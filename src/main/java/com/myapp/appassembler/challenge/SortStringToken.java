@@ -1,4 +1,4 @@
-package com.myapp.appassembler.tool;
+package com.myapp.appassembler.challenge;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
